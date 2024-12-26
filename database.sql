@@ -1,22 +1,6 @@
--- --------------------------------------------------------
--- Host:                         127.0.0.1
--- Server version:               8.0.30 - MySQL Community Server - GPL
--- Server OS:                    Win64
--- HeidiSQL Version:             12.1.0.6537
--- --------------------------------------------------------
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8 */;
-/*!50503 SET NAMES utf8mb4 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-
-
--- Dumping database structure for db_tracking
-CREATE DATABASE IF NOT EXISTS `db_tracking` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `db_tracking`;
+-- /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `db_tracking`;
 
 -- Dumping structure for table db_tracking.tb_mahasiswa
@@ -27,7 +11,8 @@ CREATE TABLE IF NOT EXISTS `tb_mahasiswa` (
   `peminatan` varchar(30) DEFAULT NULL,
   `jenis_kelamin` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`id_m`)
-) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
+-- ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table db_tracking.tb_mahasiswa: ~80 rows (approximately)
 INSERT INTO `tb_mahasiswa` (`id_m`, `nama_mahasiswa`, `nim`, `peminatan`, `jenis_kelamin`) VALUES
@@ -123,7 +108,8 @@ CREATE TABLE IF NOT EXISTS `tb_progress` (
   KEY `id_t` (`id_t`),
   CONSTRAINT `tb_progress_ibfk_1` FOREIGN KEY (`id_m`) REFERENCES `tb_mahasiswa` (`id_m`),
   CONSTRAINT `tb_progress_ibfk_2` FOREIGN KEY (`id_t`) REFERENCES `tb_tahapan` (`id_t`)
-) ENGINE=InnoDB AUTO_INCREMENT=6033 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
+-- ENGINE=InnoDB AUTO_INCREMENT=6033 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table db_tracking.tb_progress: ~331 rows (approximately)
 INSERT INTO `tb_progress` (`id_p`, `id_m`, `id_t`, `tanggal`) VALUES
@@ -472,7 +458,8 @@ CREATE TABLE IF NOT EXISTS `tb_skripsi` (
   PRIMARY KEY (`id_s`),
   KEY `id_m` (`id_m`),
   CONSTRAINT `tb_skripsi_ibfk_1` FOREIGN KEY (`id_m`) REFERENCES `tb_mahasiswa` (`id_m`)
-) ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
+-- ENGINE=InnoDB AUTO_INCREMENT=81 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table db_tracking.tb_skripsi: ~80 rows (approximately)
 INSERT INTO `tb_skripsi` (`id_s`, `id_m`, `judul`, `dospembimbing1`, `dospembimbing2`, `penguji1`, `penguji2`, `penguji3`) VALUES
@@ -562,7 +549,8 @@ CREATE TABLE IF NOT EXISTS `tb_tahapan` (
   `id_t` int NOT NULL AUTO_INCREMENT,
   `nama_tahap` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id_t`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+);
+-- ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Dumping data for table db_tracking.tb_tahapan: ~5 rows (approximately)
 INSERT INTO `tb_tahapan` (`id_t`, `nama_tahap`) VALUES
@@ -571,9 +559,3 @@ INSERT INTO `tb_tahapan` (`id_t`, `nama_tahap`) VALUES
 	(3, 'Penelitian Hasil'),
 	(4, 'Menyusun Skripsi'),
 	(5, 'Telah Selesai');
-
-/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
-/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
-/*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40111 SET SQL_NOTES=IFNULL(@OLD_SQL_NOTES, 1) */;
