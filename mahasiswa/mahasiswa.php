@@ -13,7 +13,7 @@ $queryStudents = "SELECT
                   LEFT JOIN 
                     tb_progress p ON m.id_m = p.id_m 
                   GROUP BY 
-                    m.id_m 
+                    m.id_m, m.nim, m.nama_mahasiswa, m.peminatan 
                   ORDER BY 
                     m.nim";
 
