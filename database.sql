@@ -93,7 +93,7 @@ INSERT INTO `tb_mahasiswa` (`id_m`, `nama_mahasiswa`, `nim`, `peminatan`, `jenis
 	(81, 'Urif Hermawan', 'E1E119081', 'Jaringan', 'Laki-Laki'),
 	(82, 'Wa Ode Kinanti Ayunin Asadih', 'E1E119082', 'RPL', 'Perempuan'),
 	(83, 'Waode Anti', 'E1E119083', 'RPL', 'Perempuan'),
-	(84, 'Winel Dwi Satrini', 'E1E119084', 'Jaringan', 'Perempuan'),
+	(84, 'Winel Dwi Satrini', 'E1E119084', 'RPL', 'Perempuan'),
 	(85, 'Yoga Maulana', 'E1E119085', 'Jaringan', 'Laki-Laki'),
 	(86, 'Yuyun Rusmianti', 'E1E119086', 'RPL', 'Perempuan');
 
@@ -555,8 +555,11 @@ INSERT INTO `tb_progress` (`id_p`, `id_m`, `id_t`, `tanggal`) VALUES
 	(330, 74, 4, '2024-12-25'),
 	(331, 80, 4, '2024-12-25'),
 	(332, 84, 4, '2024-12-25'),
-	(6027, 32, 1, '2024-01-06'),
-	(6028, 32, 2, '2024-05-06'),
-	(6029, 32, 3, '2024-10-01'),
-	(6031, 1, 5, '2024-01-06');
+	(333, 32, 1, '2024-01-06'),
+	(334, 32, 2, '2024-05-06'),
+	(335, 32, 3, '2024-10-01'),
+	(336, 1, 5, '2024-01-06'),
+	(337, 35, 3, '2024-01-27'),
+	(338, 84, 5, '2024-01-31'),
+	(339, 49, 5, '2024-01-31');
 
